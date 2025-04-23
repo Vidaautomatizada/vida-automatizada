@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pack de Planilhas - Vida Automatizada</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f4f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #0a9396;
+      text-align: center;
+    }
+    .btn {
+      display: block;
+      width: max-content;
+      margin: 2rem auto 1rem auto;
+      padding: 1rem 2rem;
+      background-color: #0a9396;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #05676e;
+    }
+    ul {
+      margin-left: 1.5rem;
+    }
+    img, iframe {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    canvas {
+      max-width: 100%;
+      margin: 2rem 0;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Pack de Planilhas Vida Automatizada</h1>
+    <img src="https://placehold.co/800x400?text=Visual+das+Planilhas" alt="Exemplo das planilhas">
+    <p>Organize sua vida pessoal e seus negócios com 5 planilhas profissionais, feitas no Google Planilhas com automações, gráficos e visual moderno!</p>
+
+    <h2>📦 O que você vai receber:</h2>
+    <ul>
+      <li>✅ Controle financeiro com gráficos automáticos</li>
+      <li>✅ Planejamento mensal com metas e barra de progresso</li>
+      <li>✅ Controle de vendas e estoque com relatórios mensais</li>
+      <li>✅ Planejamento de conteúdo com calendário inteligente</li>
+      <li>✅ Gestão de metas com termômetro visual</li>
+    </ul>
+
+    <h2>📊 Exemplo Interativo de Gráfico:</h2>
+    <canvas id="graficoFinanceiro" height="200"></canvas>
+
+    <h2>🎥 Vídeo explicativo (Português - Brasil)</h2>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/sxUOdYFdwfM" title="Exemplo de uso de planilhas no Google Sheets" frameborder="0" allowfullscreen></iframe>
+
+    <h2>💡 Ideal para:</h2>
+    <ul>
+      <li>Empreendedores iniciantes</li>
+      <li>Pessoas que querem organizar a vida financeira</li>
+      <li>Quem quer começar um negócio com baixo custo</li>
+    </ul>
+
+    <h2>🚀 Oferta de Lançamento</h2>
+    <p>De <s>R$47</s> por apenas <strong>R$17,77</strong> por tempo limitado!</p>
+
+    <a class="btn" href="#">Quero minhas planilhas agora</a>
+    <p style="margin-top: 1rem; font-size: 0.9rem; color: #666; text-align: center;">Entrega instantânea via Google Drive após a compra. Garantia de 7 dias.</p>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('graficoFinanceiro').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril'],
+        datasets: [{
+          label: 'Gastos Mensais',
+          data: [1200, 950, 1100, 870],
+          backgroundColor: '#0a9396'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            enabled: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
